@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hyperlink</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">     
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/vue"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+
+    <style>
+        .custom-font {
+           font-family: 'Montserrat', sans-serif;
+        }
+    </style>
+
+</head>
+<body>
+  <div id="app">
+    <div class="flex flex-row h-20 w-full top-0 fixed border-b-2 border-opacity-10 border-black px-24 justify-between items-center custom-font z-10 bg-white">
+      
+      <div class="flex flex-row justify-around items-center">
+        <a class="text-xl font-bold pr-20 ">Hyper<span style="color: #6B5DFF;">Link</span></a>
+        <a class="pr-8" style="cursor: pointer" v-on:click="selection = 'query'; goto()" >Query</a>
+        <a class="pr-8" style="cursor: pointer" v-on:click="selection = 'maps'; goto()" >Maps</a>
+        <a class="pr-8" style="cursor: pointer" v-on:click="selection = 'browser'; goto()">SMS Browser</a>
+        <a class="pr-8" style="cursor: pointer" v-on:click="selection = 'stellar'; goto()">Stellar Integration</a>
+
+      </div>
+      <div>
+        <div class="border rounded-full px-6 py-3 text-white custom-font" style="background-color: #6B5DFF" >
+          <a href="https://github.com/joshuajung01/Pinnacle2021" target="_blank" rel="noopener noreferrer">View on Github</a>
+        </div>
+      </div> 
+    </div>
+    <img src="assets/rectangle.svg" class="absolute float-left pt-64" style="max-height: 600px;">
+    <img src="assets/Rectangle2.svg" class="absolute right-0 pt-0" style="max-height: 300px;">
+    <div class="h-screen items-center pt-80">
+      <div class="text-center">
+        <p class="text-7xl custom-font font-bold">Internet Everywhere.</p>
+        <p class="text-7xl custom-font font-bold pt-4">Yes, even there.</p>
+      
+      </div>
+    </div>
+    <div ref="bottom" class="h-screen flex flex-row justify-between items-center px-24 pt-24 ">
+      <div class="flex flex-col justify-center">
+        <a style="cursor: pointer" class="text-5xl font-bold py-12 custom-font" v-on:click="selection = 'query'" v-bind:style= "[selection == 'query' ? {opacity: 1} : {opacity: 0.3}]">Query</a>
+        <a style="cursor: pointer" class="text-5xl font-bold py-12 custom-font" v-on:click="selection = 'maps'" v-bind:style= "[selection == 'maps' ? {opacity: 1} : {opacity: 0.3}]">Maps</a>
+        <a style="cursor: pointer" class="text-5xl font-bold py-12 custom-font" v-on:click="selection = 'browser'" v-bind:style= "[selection == 'browser' ? {opacity: 1} : {opacity: 0.3}]">Browser</a>
+        <a style="cursor: pointer" class="text-5xl font-bold py-12 custom-font" v-on:click="selection = 'stellar'" v-bind:style= "[selection == 'stellar' ? {opacity: 1} : {opacity: 0.3}]">Stellar</a>
+      </div>
+      <div class="max-w-5xl">
+        
+      </div>
+      <div class=""> 
+        <img class="w-80" v-bind:src="'./assets/' + selection + '.svg'">
+      </div>
+    
+  </div>
+</div>
+
+<script>
+    new Vue({
+      el: "#app",
+      data: function () {
+          return {
+            scrollPosition: null,
+            selection: "browser",
+          }
+      },
+      methods: {
+        say: function (message) {
+          alert(message)
+        },
+        goto: function () {
+          window.scrollTo( {
+              top: this.$refs['bottom'].offsetTop,
+              left: 0,
+              behavior: 'smooth'
+          })
+        }
+      }
+    })
+</script>
+
+</body>  
+
+</html>
+
