@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="61px" height="82px" viewBox="0 0 61 82" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Arrow </title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round">
+        <g id="Home" transform="translate(-781.000000, -757.000000)" stroke="#979797" stroke-width="7">
+            <g id="Arrow-" transform="translate(784.000000, 760.500000)">
+                <line x1="27.5" y1="2.84928331e-14" x2="27.5" y2="75" id="Line"></line>
+                <line x1="0.5" y1="48" x2="27.5" y2="75" id="Line"></line>
+                <line x1="54.5" y1="48" x2="27.5" y2="75" id="Line"></line>
+            </g>
+        </g>
+    </g>
+</svg>

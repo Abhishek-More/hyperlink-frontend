@@ -42,10 +42,10 @@
     <img src="assets/rectangle.svg" class="absolute float-left pt-64" style="max-height: 600px;">
     <img src="assets/Rectangle2.svg" class="absolute right-0 pt-0" style="max-height: 300px;">
     <div class="h-screen items-center pt-80">
-      <div class="text-center">
+      <div class="text-center flex flex-col">
         <p class="text-7xl custom-font font-bold">Internet Everywhere.</p>
         <p class="text-7xl custom-font font-bold pt-4">Yes, even there.</p>
-      
+        <img src="./assets/Arrow .svg" class="mt-36" style="max-height: 50px; opacity: 0.3;">
       </div>
     </div>
     <div ref="bottom" class="h-screen flex flex-row justify-between items-center px-24 pt-24 ">
@@ -71,7 +71,7 @@
       data: function () {
           return {
             scrollPosition: null,
-            selection: "browser",
+            selection: "query",
           }
       },
       methods: {
